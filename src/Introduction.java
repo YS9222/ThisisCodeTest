@@ -56,7 +56,7 @@ public class Introduction {
             for (int j = 0; j < m; j++) {
                 int x = sc.nextInt();
                 min_value = Math.min(min_value, x); //!! i가 0일때 그 안에서 j값을 반복하면서 비교 
-//            }										/(j0값과 minvalue비교 minvaul저장-> 저장한값과 j1값을 비교 minvaul저장->저장한값과 j2값을 비교 ->반복)
+            }										//(j0값과 minvalue비교 minvaul저장-> 저장한값과 j1값을 비교 minvaul저장->저장한값과 j2값을 비교 ->반복)
             // '가장 작은 수'들 중에서 가장 큰 수 찾기
             result = Math.max(result, min_value);  //i 가 0일때 나온 minval값과 result비교 result저장 -> 저장한 result값과 i1일때의 minval 비교 result저장 -> 반복
             										//이렇게 반복하여 i0~in-1 의 minvalue값 중 최대 값 비교가능(처음에 이해못한 것 ) 
@@ -104,7 +104,7 @@ public class Introduction {
 //	public static int n; //전역변수화
 	
 	}
-}
+
 
 
 	
