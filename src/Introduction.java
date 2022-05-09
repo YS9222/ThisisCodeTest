@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Introduction {
 
 	public static void main(String args[]) {
-		// Greedy num2
+		// Greedy num2 p92
 		// Mine - Fail (방법도출실패)
 //	Scanner sc = new Scanner(System.in);
 //	
@@ -37,7 +37,34 @@ public class Introduction {
 //	System.out.println(result);
 
 //	}
-
+		//Retry
+//		Scanner sc = new Scanner(System.in);
+//		int n = sc.nextInt();
+//		int m = sc.nextInt();
+//		int k = sc.nextInt();
+//		
+//		int[] array = new int[n];
+//		for(int i=0; i<array.length; i++) {
+//			array[i] = sc.nextInt();
+//		}
+//		
+//		Arrays.sort(array);
+//		
+//		int first = array[n-1];
+//		int second = array[n-2];
+//		
+//		int a = m /(k+1);
+//		int b = m%(k+1);
+//		
+//		
+//		int result = first * ((a*k)+b);
+//		result += second * a;
+//		
+//		
+//		System.out.println(result);
+		
+		//-----------------------------------
+		
 		// Greedy num3 (p96)
 		// mine 배열 - sort 각 행별 최소숫자 도출 - 최소숫자들을 다시 list - sort 최대숫자 도출
 		// 해설
@@ -48,7 +75,7 @@ public class Introduction {
 //		int m = sc.nextInt();
 //		int result = 0;
 //
-//		// 한 줄씩 입력 받아 확인하기
+//		// 한 줄씩 입력 받아 확인하기   한번에 입력받고 비교하느넥 아니라 하나씩 입력받을때마다 비교-저장-비교-저장.. 식으로 
 //		for (int i = 0; i < n; i++) {
 //			// 현재 줄에서 '가장 작은 수' 찾기
 //			int min_value = 10001;
@@ -99,6 +126,14 @@ public class Introduction {
 //		return b;
 //	} 
 //	public static int n; //전역변수화
+		
+		//Retry
+		
+		
+		
+		
+		
+//---------------------------
 	
 	//GREEDY NUM4 99P
 	//MINE - 나누어떨어지면(%값이 0일때?) 나누고 값을 저장한 다음 계속 판단 
@@ -120,31 +155,31 @@ public class Introduction {
 //		System.out.println(n);
 		//!!!but만약 나누는 수가 커진다면(EX만단위) 마지막 빼는 단계에서 불필요한 연산(N%K==0)이 너무 많이 실행됨
 		
-		//해설
-		  Scanner sc = new Scanner(System.in);
-
-	        // N, K를 공백을 기준으로 구분하여 입력 받기
-	        int n = sc.nextInt();
-	        int k = sc.nextInt();
-	        int result = 0;
-
-	        while (true) {
-	            // N이 K로 나누어 떨어지는 수가 될 때까지만 1씩 빼기 (EX17, 3)
-	            int target = (n / k) * k;   //나누어떨어지는수 (나누고 곱하기)(나눌횟수는 1회)(15) (3)
-	            result += (n - target);     //나누어떨어지는수 제외한 나머지  (빼게될횟수와 똑같음)(2) (3+2)
-	            n = target;
-	            // N이 K보다 작을 때 (더 이상 나눌 수 없을 때) 반복문 탈출
-	            if (n < k) break;		
-	            // K로 나누기
-	            result += 1;				//전체 연산횟수 = 나머지(빼는횟수) + 1 (나누는횟수) (3회)(6회)
-	            n = n / k;					//나누어떨어지는수를 나눈 결과 (나눌기호가 있다면 반복 )(5)(1)
-	        }
-
-	        // 마지막으로 남은 수에 대하여 1씩 빼기
-	        result = result + (n - 1);
-	        System.out.println(result);
-	       
-	    }
+//		//해설
+//		  Scanner sc = new Scanner(System.in);
+//
+//	        // N, K를 공백을 기준으로 구분하여 입력 받기
+//	        int n = sc.nextInt();
+//	        int k = sc.nextInt();
+//	        int result = 0;
+//
+//	        while (true) {
+//	            // N이 K로 나누어 떨어지는 수가 될 때까지만 1씩 빼기 (EX17, 3)
+//	            int target = (n / k) * k;   //나누어떨어지는수 (나누고 곱하기)(나눌횟수는 1회)(15) (3)
+//	            result += (n - target);     //나누어떨어지는수 제외한 나머지  (빼게될횟수와 똑같음)(2) (3+2)
+//	            n = target;
+//	            // N이 K보다 작을 때 (더 이상 나눌 수 없을 때) 반복문 탈출
+//	            if (n < k) break;		
+//	            // K로 나누기
+//	            result += 1;				//전체 연산횟수 = 나머지(빼는횟수) + 1 (나누는횟수) (3회)(6회)
+//	            n = n / k;					//나누어떨어지는수를 나눈 결과 (나눌기호가 있다면 반복 )(5)(1)
+//	        }
+//
+//	        // 마지막으로 남은 수에 대하여 1씩 빼기
+//	        result = result + (n - 1);
+//	        System.out.println(result);
+//	       
+//	    }
 		
 		
 		
@@ -155,3 +190,4 @@ public class Introduction {
 		
 	}
 
+}
