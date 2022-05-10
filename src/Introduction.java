@@ -128,10 +128,21 @@ public class Introduction {
 //	public static int n; //전역변수화
 		
 		//Retry
-		
-		
-		
-		
+//		Scanner sc = new Scanner(System.in);
+//		int n = sc.nextInt();
+//		int m = sc.nextInt();
+//		
+//		int minimum = 10001;
+//		int maximum = 0;
+//		for (int i = 0; i<n; i++) {
+//			for (int j = 0; j<m; j++) {
+//				int minvalue = sc.nextInt();
+//				minimum = Math.min(minimum, minvalue);
+//			}
+//			maximum = Math.max(maximum, minimum);
+//		}
+//		System.out.println(maximum);
+//		
 		
 //---------------------------
 	
@@ -181,13 +192,40 @@ public class Introduction {
 //	       
 //	    }
 		
-		
-		
-		
-		
-		
-		
+		//Retry(Fail)
+//		Scanner sc = new Scanner(System.in);
+//		int n = sc.nextInt();
+//		int k = sc.nextInt();
+//		//while생각해내는데 오래걸림(횟수지정되어있지 않으면서 조건될때까지 반복할때)
+//		int number = 0;
+//		int result = 0;
+//		
+//		while(true) {
+//			
+////			int a = (n/k) *k; //!!Error!! a -> 이러면 반복될 수가 없음
+////			int b = n%k;   //a+b = n
+////			number +=  1+b;
+////			result = (result-b)/k;  
+//			//!!Error!!반복시킬 수 없다는 점에서 잘못됨
+//			
+//			result = (n/k) * k; // 빼는횟수를 구할 중간단계이자(number) 반복대상을 구할 중간단계(n=n/k)
+//			number += n-result; // 빼는횟수
+//			n = result; //!!Error!!반복시키기 위해 변수지정하는 방법인데 생각 못함(나누기니까 +=는 못하고 이렇게)
+//			
+//			if (n<k) break; //
+//			
+//			n= n/k; //다음반복으로 넘길 대상(빼고 나누기를 완료) //break 앞이든 뒤든 상관없으나(연산횟수위해 뒤에있으면 좋기는함)
+//			number += 1; // 반복별 총연산횟수              //!!Error!!얘는 break 앞에 있으면 안됨()
+//			    									  //다음반복으로 못가는데 나누는 횟수를 더하면 안되지
+//
+//		}
+//		number += (result-1);
+//		System.out.println(number); 
+
+	
+
+			
+		}	
 		
 	}
 
-}
