@@ -222,24 +222,24 @@ public class Introduction {
 //		number += (result-1);
 //		System.out.println(number); 
 			
-		//Retry2(Fail)
-			Scanner sc = new Scanner(System.in);
-			int n = sc.nextInt();
-			int k = sc.nextInt(); //나누기
-			int target = 0;
-			int result = 0;
-			while(true) {
-				target = (n/k) * k;
-				result = n - target;
-				
-				if(n<k)break;
-				
-				n = (n - result) / k; //target - result) / k라고 잘못했었음
-				result += 1;
-
-			}
-			result += result-1;
-			System.out.println(result);
+//		//Retry2(Fail)
+//			Scanner sc = new Scanner(System.in);
+//			int n = sc.nextInt();
+//			int k = sc.nextInt(); //나누기
+//			int target = 0;
+//			int result = 0;
+//			while(true) {
+//				target = (n/k) * k;
+//				result = n - target; //!!Error!! +=을 해놓지 않아 반복될때 이어지지못하게 함 
+//				
+//				if(n<k)break;
+//				
+//				n = (n - result) / k; //!!Error!!(target - result) / k라고 잘못했었음
+//				result += 1;
+//
+//			}
+//			result += result-1;
+//			System.out.println(result);
 			
 		}	
 		
