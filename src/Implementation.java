@@ -60,43 +60,90 @@ public class Implementation {
 		
 
 //		Retry
-		Scanner sc = new Scanner(System.in);
-		int Size = sc.nextInt();
-		int x = 1;
-		int y = 1;
-		int Mx = 0;
-		int My = 0;
-		sc.nextLine();
-		String[] in = sc.nextLine().split(" ");
+//		Scanner sc = new Scanner(System.in);
+//		int Size = sc.nextInt();
+//		int x = 1;
+//		int y = 1;
+//		int Mx = 0;
+//		int My = 0;
+//		sc.nextLine(); // 정수입력뒤 문자열입력위해 버퍼 비우기
+//		String[] in = sc.nextLine().split(" ");
+//		
+//		char[] direction = {'L', 'R', 'U','D'};
+//		int[] dx = {0,0,-1,1};
+//		int[] dy = {-1,1,0,0};
+//		
+//		for(int i = 0; i<in.length; i++) {
+//			char plan = in[i].charAt(0); //!!Error!! 이걸 빼먹음 String을 char으로 변환
+//			
+//			for(int j = 0; j<4; j++) {
+//				if( direction[j] == plan) {
+//					Mx = x+dx[j];
+//					My = y+dy[j];
+//				}
+//			
+//			}
+//			if(Mx>Size || My>Size || Mx==0 || My==0 ) continue; //!!Error!! 아래 코드까지 위 반복문안에 넣었었음
+//			
+//			x =  Mx; //!!ERROR!! x = x + Mx 로 했었음 
+//			y =  My;// Mx, My 자체가 이미 이동결과까지 반영하여 실질적으로 실행할지말지를 결정하는 단계인데 +=를 해버리면 
+//					// 원위치 + (원위치+ 이동거리) 결과가 되어버림
+//		}
+//		System.out.println(x+" "+y);
+//		
+
+//----------------------------------------
+		//4-2 p113 implementation
+		//Mine 3중반복문?(시분초) 
+//		Scanner sc = new Scanner(System.in);
+//		int N = sc.nextInt();
+//		int count = 0;
+//		
+//		for(int t = 0; t<=N; t++ ) {
+//			String c = Integer.toString(t);
+//			if(c.charAt(0) == 3 || c.charAt(1) == 3) { //Mine 수를 String으로 변환한 다음 charAt으로뽑아서 3여부 보려함
+//				count = count + 59*59;
+//				continue;
+//			}
+//			
+//			for(int m = 0; m<60; m++) {
+//				String b = Integer.toString(m);
+//				if(b.charAt(0) == 3 || b.charAt(1) == 3) {
+//					count = count + 59;
+//					continue;
+//				}
+//				
+//				for(int s = 0; s<60; s++) {
+//					String a = Integer.toString(s);
+//					if(a.charAt(0) == 3 || a.charAt(1) == 3) {
+//						count++;
+//					}
+//				} //m에서도 같은 식으로 하려면 m 3일때 s에서 3된게 중복 카운트 됨 
+//			}
+//		} //!!Error!!삼중반복문이라는 아이디어 자체는 맞았지만 1. boolean 메서드 미활용, 2. 반복문에서 각 단계별로 따로 확인하려했음
 		
-		char[] direction = {'L', 'R', 'U','D'};
-		int[] dx = {0,0,-1,1};
-		int[] dy = {-1,1,0,0};
-		
-		for(int i = 0; i<in.length; i++) {
-			char plan = in[i].charAt(0); //!!Error!! 이걸 빼먹음 String을 char으로 변환
-			
-			for(int j = 0; j<4; j++) {
-				if( direction[j] == plan) {
-					Mx = x+dx[j];
-					My = y+dy[j];
-				}
-			
-			}
-			if(Mx>Size || My>Size || Mx==0 || My==0 ) continue; //!!Error!! 아래 코드까지 위 반복문안에 넣었었음
-			
-			x =  Mx; //!!ERROR!! x = x + Mx 로 했었음 
-			y =  My;// Mx, My 자체가 이미 이동결과까지 반영하여 실질적으로 실행할지말지를 결정하는 단계인데 +=를 해버리면 
-					// 원위치 + (원위치+ 이동거리) 결과가 되어버림
-		}
-		System.out.println(x+" "+y);
-		
-		
-		
-		
-		
-		
-		
-	}
+		//해설 
+//		public static boolean check(int h, int m, int s) {
+//			if( h%10==3 || m%10==3 || s%10==3 || m/10==3 || s/10==3 ) { //!!Error!!수의성질 판단법 생각못함
+//	  //!!Error!! 일의자리 판단법(10으로 나눠서 나머지가3), 십의자리 판단법 (10으로 나누어 몫이 3) 
+//				return true; //!!Error!! boolean 메서는 이런 명시적인 true false 외에도
+//			}return false; // return(입력값 == 3) 처럼 뒤 조건이 true인지 false 인지에 대한 결과를 반환할 수도
+//				
+//		}
+//		public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		int n = sc.nextInt();
+//		int cnt = 0;
+//		for(int h=0; h<=n; h++) {
+//			for(int m = 0; m<60; m++) {
+//				for(int s = 0; s<60; s++) {
+//					if(check(h, m, s)) {
+//						cnt++;
+//					}
+//				}
+//			}
+//		}
+//		System.out.println(cnt);
+//	}
 
 }
