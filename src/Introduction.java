@@ -240,6 +240,41 @@ public class Introduction {
 //			}
 //			result += result-1;
 //			System.out.println(result);
+		
+		//Retry3 (Fail)
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int K = sc.nextInt();
+		int result = 0;
+		int target = 0;
+		
+		
+		while(true){
+			target = (N/K)*K;
+			result = N - target; //!!Error!!! 반복되기 위한 += 놓침 (+= 안했기 때문에 아래 result++ 후 반복될 때 승계못함) 
+			N = target;
+			if(N<K) break;
+			result ++;
+			N = N/K;
+		}
+		System.out.println(result);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 			
 		}	
 		

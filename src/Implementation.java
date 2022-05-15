@@ -4,6 +4,7 @@ import java.util.*;
 public class Implementation {
 
 	public static void main(String[] args) {
+		
 		//4-1 상하좌우 p110
 		//mine RLUD을 숫자로 변환후 맞는 2차원 배열 찾아서 출ㄹ력
 		
@@ -59,7 +60,7 @@ public class Implementation {
 //        System.out.println(x + " " + y);
 		
 
-//		Retry
+//		Retry (fail)
 //		Scanner sc = new Scanner(System.in);
 //		int Size = sc.nextInt();
 //		int x = 1;
@@ -127,9 +128,9 @@ public class Implementation {
 //			if( h%10==3 || m%10==3 || s%10==3 || m/10==3 || s/10==3 ) { //!!Error!!수의성질 판단법 생각못함
 //	  //!!Error!! 일의자리 판단법(10으로 나눠서 나머지가3), 십의자리 판단법 (10으로 나누어 몫이 3) 
 //				return true; //!!Error!! boolean 메서는 이런 명시적인 true false 외에도
-//			}return false; // return(입력값 == 3) 처럼 뒤 조건이 true인지 false 인지에 대한 결과를 반환할 수도
-//				
+//			}return false; // return(입력값 == 3) 처럼 뒤 조건이 true인지 false 인지에 대한 결과를 반환할 수도	
 //		}
+//
 //		public static void main(String[] args) {
 //		Scanner sc = new Scanner(System.in);
 //		int n = sc.nextInt();
@@ -146,4 +147,5 @@ public class Implementation {
 //		System.out.println(cnt);
 //	}
 
+}
 }
