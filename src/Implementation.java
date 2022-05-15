@@ -94,34 +94,34 @@ public class Implementation {
 //		
 		
 		//Retry3 (fail)
-		Scanner sc = new Scanner(System.in);
-		int N = sc.nextInt();
-
-		int x = 1;
-		int y = 1;
-		int mx = 0;
-		int my = 0;
-		sc.nextLine();
-		String[] plan = sc.nextLine().split(" ");
-		
-		char[] direction = {'L', 'R', 'U', 'D'};
-		int[] dx = {-1,1,0,0};
-		int[] dy = {0,0,-1,1};
-		
-		for(int i =0; i<plan.length; i++) {
-			
-			char plan1 = plan[i].charAt(0);
-			for(int j =0; j<direction.length; j++) { //!!Error!!! 반복문 횟수 오류 j<3 으로 잘못넣음(깝치지말고 .length)
-				if(plan1 == direction[j]) {
-					mx = x + dx[j];
-					my = y + dy[j];
-				}
-			}
-			if(mx<1 || my<1 || mx>N || my>N ) continue;
-			x = mx;
-			y = my;
-		}
-		System.out.println(x+" "+y);
+//		Scanner sc = new Scanner(System.in);
+//		int N = sc.nextInt();
+//
+//		int x = 1;
+//		int y = 1;
+//		int mx = 0;
+//		int my = 0;
+//		sc.nextLine();
+//		String[] plan = sc.nextLine().split(" ");
+//		
+//		char[] direction = {'L', 'R', 'U', 'D'};
+//		int[] dx = {-1,1,0,0};
+//		int[] dy = {0,0,-1,1};
+//		
+//		for(int i =0; i<plan.length; i++) {
+//			
+//			char plan1 = plan[i].charAt(0);
+//			for(int j =0; j<direction.length; j++) { //!!Error!!! 반복문 횟수 오류 j<3 으로 잘못넣음(깝치지말고 .length)
+//				if(plan1 == direction[j]) {
+//					mx = x + dx[j];
+//					my = y + dy[j];
+//				}
+//			}
+//			if(mx<1 || my<1 || mx>N || my>N ) continue;
+//			x = mx;
+//			y = my;
+//		}
+//		System.out.println(x+" "+y);
 		
 		
 		
@@ -179,6 +179,37 @@ public class Implementation {
 //		}
 //		System.out.println(cnt);
 //	}
-
+	
+		//Retry 1 (fail)
+//		public static boolean time (int h, int m, int s) {
+//			
+//			if(h%10==3|| m%10==3 || s%10==3 || m/10==3 || s/10==3) {
+//				return true;}
+//			return false; //!!Error!! return fasel 없이 true만 return 하게 함
+//		}
+//				
+//		public static void main(String[] args) {
+//			Scanner sc = new Scanner(System.in);
+//			int N = sc.nextInt();
+//			int result = 0;
+//			for(int h =0; h<=N; h++) {
+//				for(int m = 0; m<60; m++) {
+//					for(int s = 0; s<60; s++) {
+//						if(time(h, m, s)) {
+//							result ++;
+//						}
+//					}
+//				}
+//			}
+//			System.out.println(result);
+		
+		
+		
+		
+		
+		
+		
+		
+		
 }
 }
