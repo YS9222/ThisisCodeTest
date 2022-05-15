@@ -92,7 +92,40 @@ public class Implementation {
 //		}
 //		System.out.println(x+" "+y);
 //		
+		
+		//Retry3 (fail)
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
 
+		int x = 1;
+		int y = 1;
+		int mx = 0;
+		int my = 0;
+		sc.nextLine();
+		String[] plan = sc.nextLine().split(" ");
+		
+		char[] direction = {'L', 'R', 'U', 'D'};
+		int[] dx = {-1,1,0,0};
+		int[] dy = {0,0,-1,1};
+		
+		for(int i =0; i<plan.length; i++) {
+			
+			char plan1 = plan[i].charAt(0);
+			for(int j =0; j<direction.length; j++) { //!!Error!!! 반복문 횟수 오류 j<3 으로 잘못넣음(깝치지말고 .length)
+				if(plan1 == direction[j]) {
+					mx = x + dx[j];
+					my = y + dy[j];
+				}
+			}
+			if(mx<1 || my<1 || mx>N || my>N ) continue;
+			x = mx;
+			y = my;
+		}
+		System.out.println(x+" "+y);
+		
+		
+		
+		
 //----------------------------------------
 		//4-2 p113 implementation
 		//Mine 3중반복문?(시분초) 
