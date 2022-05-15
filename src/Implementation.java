@@ -203,13 +203,90 @@ public class Implementation {
 //			}
 //			System.out.println(result);
 		
+		//2. knight game p115 (해결)
+		//mine abcd 숫자전환 - 이동가능한 8개경우 좌표 - 불가한것 거르기 
+		//아이디어 자체는 작동했으나 입력값을 좌표로 변환할때 필요한 코드를 몰랐고(a2Int, xIndex) 반복문에서 i j 값에서 실수함		
+//		int[] Yarray = {1,2,3,4,5,6,7,8}; //결과적으로 필요없었음
+//		char[] Xarray = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
+//		
+//		Scanner sc = new Scanner(System.in);
+//		String a = sc.next();
+//		char a1 = a.charAt(0);
+//		
+//		char a2 = a.charAt(1);
+//		int a2Int = Character.getNumericValue(a2); //뒷자리수변환 char to int 
+//		
+//		int xIndex = Arrays.binarySearch(Xarray, a1); 
+//		//앞자리char[]의 index 활용( 쓸려면 +1할것(ex a = 1))
+//		//범용성 측면에서(ex 10, 20, 30..으로 변환)는 아래 아스키코드 활용이 더 낫다
+		
+//		int x = xIndex +1;
+//		int y = a2Int;
+//
+//		int[]dx = {-1, 1, 0, 0}; //LR
+//		int[]dy = {0, 0, -1, 1}; //UD
+//		
+//		int mx = 0; int my = 0;
+//		int cnt = 0;
+//		
+//		// 해당 구조를 각 방위로  반복 후 cnt 출력
+//		for(int i = 0; i<2; i++) {
+//			mx = x+(dx[i] * 2);
+//			for(int j = 2; j<4; j++) {
+//				my = y+dy[j];
+//				
+//				if(mx < 1 || my < 1 || mx>8 || my>8) continue;
+//				cnt++;
+//			}
+//		} 
+//		for(int p = 2; p<4; p++) {
+//			my = y+(dy[p] * 2);
+//			for(int q = 0; q<2; q++) {
+//				mx = x+dx[q];
+//				
+//				if(mx < 1 || my < 1 || mx>8 || my>8) continue;
+//				cnt++;
+//			}
+//		} 		
+//		System.out.println(cnt);}
 		
 		
+		//해설
+		//
 		
+        // 현재 나이트의 위치 입력받기
+		Scanner sc = new Scanner(System.in);
+        String inputData = sc.nextLine();
+        int row = inputData.charAt(1) - '0';
+        // int 로 변수선언함으로써 char를 아스키코드값(숫자)로 변환
+        //빼낸char1의 아스키코드값 - 0의 아스키코드값(48) = 1~
+        //ex char 1의 아스키코드값 = 49 / 49-48 = 1
+        //숫자의 경우 알파벳과 다르게 1아래 0의 아스키코드값이 있기에 별도 +1 해줄필요 없음 
+        
+        int column = inputData.charAt(0) - 'a' + 1;
+        //a의 아스키코드값 = 97 / 1씩늘려가면서 알파벳진행
+
+        //so 아스키코드 통한 숫자획득의 경우 숫자 to int = charAt() - '0'/ 문자 to int = charAt() - 'a' + 1
+        
+        
+        // 나이트가 이동할 수 있는 8가지 방향 정의
+        int[] dx = {-2, -1, 1, 2, 2, 1, -1, -2}; //나와는 다르게 갈 수 있는 방위값을 미리 계산
+        int[] dy = {-1, -2, -2, -1, 1, 2, 2, 1};
+
+        // 8가지 방향에 대하여 각 위치로 이동이 가능한지 확인
+        int result = 0;
+        for (int i = 0; i < 8; i++) {
+            // 이동하고자 하는 위치 확인
+            int nextRow = row + dx[i];
+            int nextColumn = column + dy[i];
+            // 해당 위치로 이동이 가능하다면 카운트 증가
+            if (nextRow >= 1 && nextRow <= 8 && nextColumn >= 1 && nextColumn <= 8) {
+                result += 1; //continue로 거르는게 아니라 if문 &&으로 적용
+            }
+        }
+
+        System.out.println(result);
+    }
+
 		
-		
-		
-		
-		
-}
 }
