@@ -41,11 +41,17 @@ public class BFSDFS {
 //		
 //		else return fibo(n-1) + fibo(n-2);
 		
-		
-		
-		
-		
-		
+//		//4. 한숫자에서 각자리수의 합 도출 (123->6)
+//		int input = 5947; //25
+//		System.out.println(sumdigit(input));
+//	
+//	}
+//	public static int sumdigit(int n) {
+//		
+//		if(n<10) return n;
+////		else return sumdigit(n)%10 + sumdigit(n/10); //mine(overflow), 처음에 앞자리수부터 처리하려했음
+//		else return n%10 + sumdigit(n/10);
+
 	}
 }
 	
