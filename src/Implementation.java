@@ -252,41 +252,48 @@ public class Implementation {
 		
 		
 		//해설
-		//
+//		//
+//		
+//        // 현재 나이트의 위치 입력받기
+//		Scanner sc = new Scanner(System.in);
+//        String inputData = sc.nextLine();
+//        int row = inputData.charAt(1) - '0';
+//        // int 로 변수선언함으로써 char를 아스키코드값(숫자)로 변환
+//        //빼낸char1의 아스키코드값 - 0의 아스키코드값(48) = 1~
+//        //ex char 1의 아스키코드값 = 49 / 49-48 = 1
+//        //숫자의 경우 알파벳과 다르게 1아래 0의 아스키코드값이 있기에 별도 +1 해줄필요 없음 
+//        
+//        int column = inputData.charAt(0) - 'a' + 1;
+//        //a의 아스키코드값 = 97 / 1씩늘려가면서 알파벳진행
+//
+//        //so 아스키코드 통한 숫자획득의 경우 숫자 to int = charAt() - '0'/ 문자 to int = charAt() - 'a' + 1
+//        
+//        
+//        // 나이트가 이동할 수 있는 8가지 방향 정의
+//        int[] dx = {-2, -1, 1, 2, 2, 1, -1, -2}; //나와는 다르게 갈 수 있는 방위값을 미리 계산
+//        int[] dy = {-1, -2, -2, -1, 1, 2, 2, 1};
+//
+//        // 8가지 방향에 대하여 각 위치로 이동이 가능한지 확인
+//        int result = 0;
+//        for (int i = 0; i < 8; i++) {
+//            // 이동하고자 하는 위치 확인
+//            int nextRow = row + dx[i];
+//            int nextColumn = column + dy[i];
+//            // 해당 위치로 이동이 가능하다면 카운트 증가
+//            if (nextRow >= 1 && nextRow <= 8 && nextColumn >= 1 && nextColumn <= 8) {
+//                result += 1; //continue로 거르는게 아니라 if문 &&으로 적용
+//            }
+//        }
+//
+//        System.out.println(result);
+//    }
 		
-        // 현재 나이트의 위치 입력받기
-		Scanner sc = new Scanner(System.in);
-        String inputData = sc.nextLine();
-        int row = inputData.charAt(1) - '0';
-        // int 로 변수선언함으로써 char를 아스키코드값(숫자)로 변환
-        //빼낸char1의 아스키코드값 - 0의 아스키코드값(48) = 1~
-        //ex char 1의 아스키코드값 = 49 / 49-48 = 1
-        //숫자의 경우 알파벳과 다르게 1아래 0의 아스키코드값이 있기에 별도 +1 해줄필요 없음 
-        
-        int column = inputData.charAt(0) - 'a' + 1;
-        //a의 아스키코드값 = 97 / 1씩늘려가면서 알파벳진행
-
-        //so 아스키코드 통한 숫자획득의 경우 숫자 to int = charAt() - '0'/ 문자 to int = charAt() - 'a' + 1
-        
-        
-        // 나이트가 이동할 수 있는 8가지 방향 정의
-        int[] dx = {-2, -1, 1, 2, 2, 1, -1, -2}; //나와는 다르게 갈 수 있는 방위값을 미리 계산
-        int[] dy = {-1, -2, -2, -1, 1, 2, 2, 1};
-
-        // 8가지 방향에 대하여 각 위치로 이동이 가능한지 확인
-        int result = 0;
-        for (int i = 0; i < 8; i++) {
-            // 이동하고자 하는 위치 확인
-            int nextRow = row + dx[i];
-            int nextColumn = column + dy[i];
-            // 해당 위치로 이동이 가능하다면 카운트 증가
-            if (nextRow >= 1 && nextRow <= 8 && nextColumn >= 1 && nextColumn <= 8) {
-                result += 1; //continue로 거르는게 아니라 if문 &&으로 적용
-            }
-        }
-
-        System.out.println(result);
-    }
-
+//-----------------------------------------------------
+		//Number3 game development p118
+		//Mine (포기)(나중에)
 		
+		
+		
+}
+
 }
